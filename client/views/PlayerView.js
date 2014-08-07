@@ -9,7 +9,7 @@ var PlayerView = Backbone.View.extend({
   },
 
   setSong: function(song){
-    this.model = song;
+    this.model = song; // need to change this.model to grab the first song in the queue
     this.render();
   },
 
