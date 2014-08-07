@@ -11,11 +11,13 @@ var SongQueue = Songs.extend({
 
   dequeue: function(){
     var removed = this.remove(this.at(0));
-    console.log(removed);
+    this.playFirst();
   },
 
   playFirst: function(song) {
-    this.at(0).play();
+    if (this.at(0) !== undefined) {
+      this.at(0).play();
+    }
   }
 
 });

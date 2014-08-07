@@ -6,6 +6,7 @@ var SongQueueView = Backbone.View.extend({
   initialize: function() {
     this.render();
     this.collection.bind('add', this.appendSong, this);
+    this.collection.bind('remove', this.render, this);
   },
 
   appendSong: function(song) {

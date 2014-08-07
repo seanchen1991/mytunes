@@ -10,8 +10,13 @@ var SongQueueEntryView = Backbone.View.extend({
     this.render();
   },
 
-  render: function() {
+  events: {
+    'click': function() {
+      this.model.clear();
+    }
+  },
 
+  render: function() {
     return this.$el.html(this.template(this.model.toJSON()));
   }
 });
